@@ -63,9 +63,10 @@ class Toprow:
         if not self.is_compact:
             return
 
-        # moved submit box to toprow_prompt
-        self.submit_box.render()
-
+        gr.Markdown("""<p style="line-height: 5%;"><br/>""")     #add empty line
+        self.submit_box.render()  # moved submit box to toprow_prompt
+        gr.Markdown("""<p style="line-height: 70%;"><br/>""")     #add empty line
+                                                               
         self.create_prompts()
 
         with gr.Row(elem_classes=["toprow-compact-stylerow"]):
