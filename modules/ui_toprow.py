@@ -63,6 +63,9 @@ class Toprow:
         if not self.is_compact:
             return
 
+        # moved submit box to toprow_prompt
+        self.submit_box.render()
+
         self.create_prompts()
 
         with gr.Row(elem_classes=["toprow-compact-stylerow"]):
@@ -75,7 +78,9 @@ class Toprow:
         if not self.is_compact:
             return
 
-        self.submit_box.render()
+        # moved submit box to toprow_prompt
+        # self.submit_box.render()
+        pass
 
     def create_prompts(self):
         with gr.Column(elem_id=f"{self.id_part}_prompt_container", elem_classes=["prompt-container-compact"] if self.is_compact else [], scale=6):
