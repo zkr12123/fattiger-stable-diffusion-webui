@@ -182,7 +182,7 @@
     "js_modal_lightbox_gamepad_repeat": 250.0,
     "sd_webui_modal_lightbox_icon_opacity": 1,
     "sd_webui_modal_lightbox_toolbar_opacity": 0.9,
-    "gallery_height": "",
+    "gallery_height": "720px",
     "open_dir_button_choice": "Subdirectory",
     "enable_pnginfo": true,
     "save_txt": false,
