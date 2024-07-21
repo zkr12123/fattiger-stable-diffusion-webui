@@ -274,7 +274,7 @@ def create_ui():
             with ExitStack() as stack:
                 if shared.opts.txt2img_settings_accordion:
                     stack.enter_context(gr.Accordion("Open for Settings", open=False))
-                stack.enter_context(gr.Column(variant='compact', elem_id="txt2img_settings"))
+                stack.enter_context(gr.Column(variant='compact', elem_id="txt2img_settings", scale=1))
 
                 scripts.scripts_txt2img.prepare_ui()
 

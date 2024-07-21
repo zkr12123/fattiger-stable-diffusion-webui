@@ -175,7 +175,7 @@ def create_output_panel(tabname, outdir, toprow=None):
 
         util.open_folder(f)
 
-    with gr.Column(elem_id=f"{tabname}_results"):
+    with gr.Column(elem_id=f"{tabname}_results", scale=2):
         if toprow:
             toprow.create_inline_toprow_image()
 
