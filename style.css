@@ -1703,6 +1703,7 @@ body.resizing .resize-handle {
  [id$=_scrolls]{
     height :calc(100vh - 220px) !important;
     overflow-y :scroll !important;
+    overflow-x: hidden !important;
     width: 100%;
     padding-right: 5px;
     /* margin-top: 10px; */
