@@ -744,16 +744,17 @@ def create_ui(interface: gr.Blocks, unrelated_tabs, tabname):
 
     for page in ui.stored_extra_pages:
         with gr.Tab(page.title, elem_id=f"{tabname}_{page.extra_networks_tabname}", elem_classes=["extra-page"]) as tab:
-            with gr.Column(elem_id=f"{tabname}_{page.extra_networks_tabname}_prompts", elem_classes=["extra-page-prompts"]):
-                pass
+            with gr.Column(elem_id=f"{tabname}_{page.extra_networks_tabname}_scrolls"):
+                with gr.Column(elem_id=f"{tabname}_{page.extra_networks_tabname}_prompts", elem_classes=["extra-page-prompts"]):
+                    pass
 
-            elem_id = f"{tabname}_{page.extra_networks_tabname}_cards_html"
-            page_elem = gr.HTML(page.create_html(tabname, empty=True), elem_id=elem_id)
-            ui.pages.append(page_elem)
-            editor = page.create_user_metadata_editor(ui, tabname)
-            editor.create_ui()
-            ui.user_metadata_editors.append(editor)
-            related_tabs.append(tab)
+                elem_id = f"{tabname}_{page.extra_networks_tabname}_cards_html"
+                page_elem = gr.HTML(page.create_html(tabname, empty=True), elem_id=elem_id)
+                ui.pages.append(page_elem)
+                editor = page.create_user_metadata_editor(ui, tabname)
+                editor.create_ui()
+                ui.user_metadata_editors.append(editor)
+                related_tabs.append(tab)
 
     ui.button_save_preview = gr.Button('Save preview', elem_id=f"{tabname}_save_preview", visible=False)
     ui.preview_target_filename = gr.Textbox('Preview save filename', elem_id=f"{tabname}_preview_filename", visible=False)

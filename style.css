@@ -1655,3 +1655,89 @@ body.resizing .resize-handle {
     visibility: visible;
     width: auto;
 }
+
+
+
+#txt2img_setting_scroll, #img2img_setting_scroll, #pnginfo_setting_scroll{
+    height :calc(100vh - 210px) !important;
+    overflow-y :scroll !important;
+    width: 100%;
+    padding-right: 5px;
+ }
+
+#txt2img_setting_scroll::-webkit-scrollbar
+, #img2img_setting_scroll::-webkit-scrollbar
+, #pnginfo_setting_scroll::-webkit-scrollbar{
+   width: 10px;
+   visibility: visible;
+   background-color: rgba(39, 39, 39, 0.332);
+   /* background-color: transparent; */
+   /* padding: 1em;
+   margin: 10em ; */
+   border-radius: 10px;
+ }
+
+
+#txt2img_setting_scroll::-webkit-scrollbar-thumb
+, #img2img_setting_scroll::-webkit-scrollbar-thumb
+, #pnginfo_setting_scroll::-webkit-scrollbar-thumb{
+    /* width: 0.4em; */
+    background: rgb(5, 92, 241);
+    /* background-clip: content-box; */
+    /* border: 5px solid transparent; */
+    border-radius: 10px;
+  }
+
+#txt2img_setting_scroll::-webkit-scrollbar-thumb:hover
+, #img2img_setting_scroll::-webkit-scrollbar-thumb:hover 
+, #pnginfo_setting_scroll::-webkit-scrollbar-thumb:hover{
+    background: rgb(45, 129, 248);
+}                                                                   
+ 
+
+
+.extra-page-prompts{
+    margin-top: 13px;
+ }
+
+ [id$=_scrolls]{
+    height :calc(100vh - 220px) !important;
+    overflow-y :scroll !important;
+    width: 100%;
+    padding-right: 5px;
+    /* margin-top: 10px; */
+ }
+
+[id$=_scrolls]::-webkit-scrollbar{
+    width: 10px;
+    visibility: visible;
+    background-color: rgba(39, 39, 39, 0.332);
+    /* background-color: transparent; */
+    /* padding: 1em;
+    margin: 10em ; */
+    border-radius: 10px;
+  }
+
+[id$=_scrolls]::-webkit-scrollbar-thumb{
+    /* width: 0.4em; */
+    background: rgb(5, 92, 241);
+    /* background-clip: content-box; */
+    /* border: 5px solid transparent; */
+    border-radius: 10px;
+  }
+
+[id$=_scrolls]::-webkit-scrollbar-thumb:hover {
+    background: rgb(45, 129, 248);
+}
+ 
+div.dimensions-sliders{
+    min-width: 1.6em !important;
+    flex-direction: column;
+    place-content: center;
+}
+
+#txt2img_gallery, #img2img_gallery {
+    height: calc(100vh - 360px);
+    /* display: flex;
+    flex-direction: column; */
+}
